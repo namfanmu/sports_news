@@ -283,20 +283,39 @@
 													%>
 												</div>
 												<div class="paging">
+												<%
+													int endPage = (Integer) request.getAttribute("endPage");
+													int index = (Integer)request.getAttribute("index");
+													if(index == 1) {
+													%>
 													<a href="#">&laquo;</a>
 													<%
-													int endPage = (Integer) request.getAttribute("endPage");
-													int index = (Integer) request.getAttribute("index");
-													for (int i = 1; i <= endPage; i++) {
+													} else if(index > 1) {
 													%>
-													<a class="<%if (i == index)
-	out.print("active");%>"
-														href="<%=request.getContextPath()%>/index/detail?id=<%=news.getId()%>&index=<%=i%>"><%=i%></a>
+													<a href="<%=request.getContextPath()%>/index/detail?id=<%=news.getId()%>&index=<%=index - 1%>">&laquo;</a>
+													<%	
+													}
+													
+													for (int i = 1; i <= endPage; i++) {
+														
+													%>
+													<a class="<%if(i == index) out.print("active"); %>" href="<%=request.getContextPath()%>/index/detail?id=<%=news.getId()%>&index=<%=i%>"><%=i%></a>
 													<%
 													}
 													%>
+													<%
+													if(index == endPage) {
+													%>
 													<a href="#">&raquo;</a>
+													<%
+													} else if(index < endPage) {
+													%>
+													<a href="<%=request.getContextPath()%>/index/detail?id=<%=news.getId()%>&index=<%=index + 1%>">&raquo;</a>
+													<%
+													}
+													%>
 												</div>
+												
 											</div>
 										</div>
 									</div>

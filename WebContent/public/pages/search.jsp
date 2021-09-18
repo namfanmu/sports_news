@@ -151,10 +151,19 @@
 										}
 										%>
 										<div class="paging">
-											<a href="#">&laquo;</a>
-											<%
+										<%
 											int endPage = (Integer) request.getAttribute("endPage");
 											int index = (Integer)request.getAttribute("index");
+											if(index == 1) {
+											%>
+											<a href="#">&laquo;</a>
+											<%
+											} else if(index > 1) {
+											%>
+											<a href="<%=request.getContextPath()%>/index/search?index=<%=index - 1%>&txtSearch=<%=txtSearch%>">&laquo;</a>
+											<%	
+											}
+											
 											for (int i = 1; i <= endPage; i++) {
 												
 											%>
@@ -162,7 +171,17 @@
 											<%
 											}
 											%>
+											<%
+											if(index == endPage) {
+											%>
 											<a href="#">&raquo;</a>
+											<%
+											} else if(index < endPage) {
+											%>
+											<a href="<%=request.getContextPath()%>/index/search?index=<%=index + 1%>&txtSearch=<%=txtSearch%>">&raquo;</a>
+											<%
+											}
+											%>
 										</div>
 									</div>
 									<div class="col-lg-4">
