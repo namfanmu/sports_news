@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>sport_news_jsp_project</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>AdminAddNewsController</servlet-name>
+		<servlet-class>controller.AdminAddNewsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminAddNewsController</servlet-name>
+		<url-pattern>/admin/news/add</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminIndexController</servlet-name>
+		<servlet-class>controller.AdminIndexController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminIndexController</servlet-name>
+		<url-pattern>/admin/index</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminEditNewsController</servlet-name>
+		<servlet-class>controller.AdminEditNewsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminEditNewsController</servlet-name>
+		<url-pattern>/admin/news/edit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminDeleteNewsController</servlet-name>
+		<servlet-class>controller.AdminDeleteNewsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminDeleteNewsController</servlet-name>
+		<url-pattern>/admin/news/delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminAddCatsController</servlet-name>
+		<servlet-class>controller.AdminAddCatsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminAddCatsController</servlet-name>
+		<url-pattern>/admin/cats/add</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminDeleteCatsController</servlet-name>
+		<servlet-class>controller.AdminDeleteCatsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminDeleteCatsController</servlet-name>
+		<url-pattern>/admin/cats/delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminEditCatsController</servlet-name>
+		<servlet-class>controller.AdminEditCatsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminEditCatsController</servlet-name>
+		<url-pattern>/admin/cats/edit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminIndexNewsController</servlet-name>
+		<servlet-class>controller.AdminIndexNewsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminIndexNewsController</servlet-name>
+		<url-pattern>/admin/news</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminIndexCatsController</servlet-name>
+		<servlet-class>controller.AdminIndexCatsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminIndexCatsController</servlet-name>
+		<url-pattern>/admin/cats</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminIndexUsersController</servlet-name>
+		<servlet-class>controller.AdminIndexUsersController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminIndexUsersController</servlet-name>
+		<url-pattern>/admin/users</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminDeleteUserController</servlet-name>
+		<servlet-class>controller.AdminDeleteUserController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminDeleteUserController</servlet-name>
+		<url-pattern>/admin/users/delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminIndexFeedbackController</servlet-name>
+		<servlet-class>controller.AdminIndexFeedbackController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminIndexFeedbackController</servlet-name>
+		<url-pattern>/admin/feedback</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PublicIndexController</servlet-name>
+		<servlet-class>controller.PublicIndexController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicIndexController</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PublicDetailNewsController</servlet-name>
+		<servlet-class>controller.PublicDetailNewsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicDetailNewsController</servlet-name>
+		<url-pattern>/index/detail</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PublicTextNewsController</servlet-name>
+		<servlet-class>controller.PublicTextNewsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicTextNewsController</servlet-name>
+		<url-pattern>/index/text</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PublicVideoNewsController</servlet-name>
+		<servlet-class>controller.PublicVideoNewsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicVideoNewsController</servlet-name>
+		<url-pattern>/index/video</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PublicCatsController</servlet-name>
+		<servlet-class>controller.PublicCatsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicCatsController</servlet-name>
+		<url-pattern>/index/cats</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PublicSearchController</servlet-name>
+		<servlet-class>controller.PublicSearchController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicSearchController</servlet-name>
+		<url-pattern>/index/search</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PublicFeedbackController</servlet-name>
+		<servlet-class>controller.PublicFeedbackController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicFeedbackController</servlet-name>
+		<url-pattern>/index/feedback</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserRegisterController</servlet-name>
+		<servlet-class>controller.UserRegisterController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserRegisterController</servlet-name>
+		<url-pattern>/index/register</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserLoginController</servlet-name>
+		<servlet-class>controller.UserLoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLoginController</servlet-name>
+		<url-pattern>/index/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserLogoutController</servlet-name>
+		<servlet-class>controller.UserLogoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLogoutController</servlet-name>
+		<url-pattern>/index/logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserCommentController</servlet-name>
+		<servlet-class>controller.UserCommentController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserCommentController</servlet-name>
+		<url-pattern>/index/comment</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UserEditInfoController</servlet-name>
+		<servlet-class>controller.UserEditInfoController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserEditInfoController</servlet-name>
+		<url-pattern>/index/edit_info</url-pattern>
+	</servlet-mapping>
+</web-app>
