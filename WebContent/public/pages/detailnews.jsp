@@ -193,7 +193,7 @@
 																	style="text-decoration: none;"><%=relatedNews.getTitle()%></a>
 															</h5>
 															<p class="fs-13 text-muted mb-0">
-																<span class="mr-2"><%=relatedNews.getCreated_date()%></span>
+																<span class="mr-2">Ngày đăng: <%=relatedNews.getCreated_date()%></span>
 															</p>
 														</div>
 													</div>
@@ -338,7 +338,7 @@
 																	style="text-decoration: none;"><%=latestNews.getTitle()%></a>
 															</h5>
 															<p class="fs-13 text-muted mb-0">
-																<span class="mr-2"><%=latestNews.getCreated_date()%></span>
+																<span class="mr-2">Ngày đăng: <%=latestNews.getCreated_date()%></span>
 															</p>
 														</div>
 														<div class="col-sm-4" style="height: 120px">
@@ -379,7 +379,7 @@
 															style="text-decoration: none;"><%=mostViewNews.getTitle()%></a>
 													</h3>
 													<p class="fs-13 text-muted mb-0">
-														<span class="mr-2"><%=mostViewNews.getCreated_date()%></span>
+														<span class="mr-2">Ngày đăng: <%=mostViewNews.getCreated_date()%></span>
 													</p>
 												</div>
 												<%

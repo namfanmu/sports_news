@@ -153,7 +153,7 @@
 														style="text-decoration: none;"><%=news.getTitle()%></a>
 												</h2>
 												<p class="fs-13 text-muted mb-0">
-													<span class="mr-2"><%=news.getCreated_date()%> </span>
+													<span class="mr-2">Ngày đăng: <%=news.getCreated_date()%> </span>
 												</p>
 												<p class="fs-15"><%=news.getPreview()%></p>
 											</div>
@@ -162,20 +162,38 @@
 										}
 										%>
 										<div class="paging">
-											<a href="#">&laquo;</a>
-											<%
+										<%
 											int cats_id = (Integer) request.getAttribute("cats_id");
 											int endPage = (Integer) request.getAttribute("endPage");
-											int index = (Integer) request.getAttribute("index");
-											for (int i = 1; i <= endPage; i++) {
+											int index = (Integer)request.getAttribute("index");
+											if(index == 1) {
 											%>
-											<a class="<%if (i == index)
-	out.print("active");%>"
-												href="<%=request.getContextPath()%>/index/cats?cats_id=<%=cats_id %>&index=<%=i%>"><%=i%></a>
+											<a href="#">&laquo;</a>
+											<%
+											} else if(index > 1) {
+											%>
+											<a href="<%=request.getContextPath()%>/index/cats?cats_id=<%=cats_id %>&index=<%=index - 1%>">&laquo;</a>
+											<%	
+											}
+											
+											for (int i = 1; i <= endPage; i++) {
+												
+											%>
+											<a class="<%if(i == index) out.print("active"); %>" href="<%=request.getContextPath()%>/index/cats?cats_id=<%=cats_id %>&index=<%=i%>"><%=i%></a>
 											<%
 											}
 											%>
+											<%
+											if(index == endPage) {
+											%>
 											<a href="#">&raquo;</a>
+											<%
+											} else if(index < endPage) {
+											%>
+											<a href="<%=request.getContextPath()%>/index/cats?cats_id=<%=cats_id %>&index=<%=index + 1%>">&raquo;</a>
+											<%
+											}
+											%>
 										</div>
 									</div>
 									<div class="col-lg-4">
@@ -198,7 +216,7 @@
 																	style="text-decoration: none;"><%=latestNews.getTitle()%></a>
 															</h5>
 															<p class="fs-13 text-muted mb-0">
-																<span class="mr-2"><%=latestNews.getCreated_date()%></span>
+																<span class="mr-2">Ngày đăng: <%=latestNews.getCreated_date()%></span>
 															</p>
 														</div>
 														<div class="col-sm-4" style="height: 120px">
@@ -239,7 +257,7 @@
 															style="text-decoration: none;"><%=mostViewNews.getTitle()%></a>
 													</h3>
 													<p class="fs-13 text-muted mb-0">
-														<span class="mr-2"><%=mostViewNews.getCreated_date()%></span>
+														<span class="mr-2">Ngày đăng: <%=mostViewNews.getCreated_date()%></span>
 													</p>
 												</div>
 												<%

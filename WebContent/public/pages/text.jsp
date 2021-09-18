@@ -141,7 +141,7 @@
 														style="text-decoration: none;"><%=news.getTitle()%></a>
 												</h2>
 												<p class="fs-13 text-muted mb-0">
-													<span class="mr-2"><%=news.getCreated_date()%> </span>
+													<span class="mr-2">Ngày đăng: <%=news.getCreated_date()%> </span>
 												</p>
 												<p class="fs-15"><%=news.getPreview()%></p>
 											</div>
@@ -207,7 +207,7 @@
 															style="text-decoration: none;"><%=mostViewTextNews.getTitle()%></a>
 													</h3>
 													<p class="fs-13 text-muted mb-0">
-														<span class="mr-2"><%=mostViewTextNews.getCreated_date()%></span>
+														<span class="mr-2">Ngày đăng: <%=mostViewTextNews.getCreated_date()%></span>
 													</p>
 												</div>
 												<%

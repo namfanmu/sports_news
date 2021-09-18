@@ -240,7 +240,7 @@
 													style="text-decoration: none;"><%=news.getTitle()%></a>
 											</h2>
 											<div class="fs-13 mb-2">
-												<%=news.getCreated_date()%>
+												<span>Ngày đăng: </span> <%=news.getCreated_date()%>
 											</div>
 											<p class="mb-0"><%=news.getPreview()%></p>
 										</div>
